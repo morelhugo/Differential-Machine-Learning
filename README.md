@@ -8,3 +8,12 @@ L’article traite d’une technique combinant Machine Learning et la différent
 « Différentiation Adjointe » (AD) est basée sur le Théorème de Dérivation des Fonctions Composées ou « Chain-rule ». L’AD peut être vue de deux manières différentes : en avant ou à l’envers. Il s’avère que l’AD à l’envers n’est ni plus ni moins que la notion de back- propagation dans les réseaux de neurones. Les auteurs défendent la thèse selon laquelle cette technique novatrice est particulièrement rapide et précise pour résoudre des problèmes d’optimisation variés ; notamment en finance de marché et plus particulièrement en évaluation d’option et des « grecques ». Les résultats présentés sont objectivement impressionnants. En effet, il s’avère que le DML est plus rapide et efficace que les méthodes classiques de Monte- Carlo et différences finies. Les résultats présentés sont soutenus par des théorèmes dont les essais de la preuve3 sont donnés dans l’article. De plus, les auteurs présentent l’intérêt de leur travail dans un cadre professionnel, tant pour des problématiques d’évaluation, de gestion de risque (grecques), de réajustement de valeurs (XVA), etc...
 
 Dans ce rapport, nous commenceront par une revue de la littérature pour faire un état des lieux du sujet. Ensuite, nous expliciterons la théorie derrière l’article pour pouvoir appréhender les apports de l’article dans les mondes scientifiques et professionnels. Ainsi, nous pourrons présenter les résultats trouvés dans l’article ainsi que ceux de notre implémentation de la procédure. Pour finir, nous apporterons une discussion et une critique constructive du sujet.
+
+
+# Project' Architecture
+
+## Report :
+  PDF : Report Differential Machine Learning.pdf
+  
+## Presentation :
+  LaTex report : Presentation Differential Machine Learning
