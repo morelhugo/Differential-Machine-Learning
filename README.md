@@ -1,35 +1,10 @@
 # Differential-Machine-Learning
 
-DIFFERENTIAL MACHINE LEARNING
-RAPPORT D’UNE APPROCHE DISRUPTIVE DE L’ÉVALUATION D’OPTIONS ET DE LEURS DÉRIVÉES
-MOREL Hugo, NGO Olivier et PIACENTINO Léo Machine Learning in Finance | ENSAE 2020-2021
- 
- «The unreasonable effectiveness of what we called ’differential machine learning’ permits to accurately train ML models on a small number of simulated payoffs, in real-time, suitable for online learning. Differential networks apply to real-world problems, including regulations and risk reports with multiple scenarios. Twin networks predict prices and Greeks with almost analytic speed, and their empirical test error remains of comparable magnitude to nested Monte-Carlo. » - Antone Savine and Brian Huge. Differential Machine Learning. arXiv:2005.02347v4. January 2020 (updated in October 2020).
-«Standard one-sided bump-and-recalculate [Monte-Carlo] would take about half an hour. Bad. However, with automatic adjoint differentiation, you get the same numbers – to the 8th decimal – in a few seconds. » - Rolf Poulsen. This Is Not Sparta: A Joint Effort. WILMOTT Magazine, p.36-37. 2018.
- 1
+L’article étudié ici, « Differential Machine Learning »1, a été écrit en Janvier 2020 et publié sous arXiv.org (site de l’université de Cornell) par Antoine Savine et Brian Huge (Chief Analysts) deux chercheurs de l’équipe « Superfly analytics » à Danske Bank et docteurs en mathématiques, diplômés de l’université de Copenhague. Remarquons qu’il semblerait que ce sujet soit essentiellement traité ou tout du moins géré par Antoine Savine. En effet, le sujet traité par l’article est le domaine de recherche de ce dernier, l’«Automatic Adjoint Differentiation »2, dite AAD. En témoignent :
+- son livre : Modern Computational Finance: AAD and Parallel Simulations.
+- son cours à King’s college : https://nms.kcl.ac.uk/probability/workshopPages.php?id=8
 
-Table des matières
-1 2 3
-4
-5
-6 7 8 9
-Introduction ....................................................................................................................... 3 Revue de la littérature ....................................................................................................... 4 Théorie et implémentation ................................................................................................ 4
-3.1
-3.2
-3.3
-3.3.1 3.3.2 3.3.3
-Réseaux de neurones et AAD............................................................................................... 4
-Differential Machine Learning............................................................................................ 7
-Implémentation, de la théorie à la pratique ....................................................................... 9
-Graphiques d’évaluation...................................................................................................................9 Éléments constitutifs atomiques ..................................................................................................... 10 « The Tape »...................................................................................................................................10
-Résultats principaux et applications ............................................................................... 11
-4.1
-4.2
-4.2.1 4.2.2
-Présentation et commentaires des résultats principaux du papier ................................ 11
-Applications......................................................................................................................... 12
-Option Digitale ............................................................................................................................... 12 Extension : Gamma ........................................................................................................................ 13
-Apports de l'article........................................................................................................... 14
-5.1 Point de vue scientifique/théorique ................................................................................... 14
-5.2 Point de vue pratique/professionnel..................................................................................14
-Discussion et critiques ..................................................................................................... 14 Conclusion ....................................................................................................................... 15 Références........................................................................................................................ 16 Annexe ............................................................................................................................. 17
+L’article traite d’une technique combinant Machine Learning et la différentiation automatique adjointe (AAD), donnant le Machine Learning différentiel (DML). Le DML combine des techniques de « Deep Learning » et des méthodes d’analyse numérique (AAD). La «
+« Différentiation Adjointe » (AD) est basée sur le Théorème de Dérivation des Fonctions Composées ou « Chain-rule ». L’AD peut être vue de deux manières différentes : en avant ou à l’envers. Il s’avère que l’AD à l’envers n’est ni plus ni moins que la notion de back- propagation dans les réseaux de neurones. Les auteurs défendent la thèse selon laquelle cette technique novatrice est particulièrement rapide et précise pour résoudre des problèmes d’optimisation variés ; notamment en finance de marché et plus particulièrement en évaluation d’option et des « grecques ». Les résultats présentés sont objectivement impressionnants. En effet, il s’avère que le DML est plus rapide et efficace que les méthodes classiques de Monte- Carlo et différences finies. Les résultats présentés sont soutenus par des théorèmes dont les essais de la preuve3 sont donnés dans l’article. De plus, les auteurs présentent l’intérêt de leur travail dans un cadre professionnel, tant pour des problématiques d’évaluation, de gestion de risque (grecques), de réajustement de valeurs (XVA), etc...
+
+Dans ce rapport, nous commenceront par une revue de la littérature pour faire un état des lieux du sujet. Ensuite, nous expliciterons la théorie derrière l’article pour pouvoir appréhender les apports de l’article dans les mondes scientifiques et professionnels. Ainsi, nous pourrons présenter les résultats trouvés dans l’article ainsi que ceux de notre implémentation de la procédure. Pour finir, nous apporterons une discussion et une critique constructive du sujet.
